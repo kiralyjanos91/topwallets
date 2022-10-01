@@ -1,0 +1,39 @@
+.header{
+    height:fit-content;
+    margin-top:56px;
+    background-image: url("../images/cover-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+
+.header-blur{
+    backdrop-filter: blur(10px) brightness(60%);
+    padding-top:90px !important;
+    padding-bottom:90px !important;
+    margin: 0;
+    padding: 0;
+}
+
+.header-blur{
+    color:white;
+}
+
+.header-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-buttons {
+    justify-content: center;
+    column-gap: 10px;
+    display: flex;
+}
+
+.crypto-img{
+    max-height: 400px;
+    max-width: 100%;
+}

@@ -1,0 +1,42 @@
+.coin-body{
+    max-width: 100%;
+    min-height: 100vh;
+    margin:0;
+    margin-top:56px;
+    justify-content: center;
+}
+
+.coin-data{
+    justify-content: center;
+}
+
+.coin-headline{
+    display:flex;
+    justify-content: center;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+.coin-name{
+    color:white;
+}
+
+.coin-headline > img{
+    height: 50px;
+    width: 50px;
+}
+
+.spinner-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.chart-time-period-text{
+    display:flex;
+    justify-content: center;
+    color:white;
+    column-gap: 10px;
+    cursor: pointer;
+}

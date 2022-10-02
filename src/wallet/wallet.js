@@ -34,7 +34,7 @@ export default function Wallet(){
             </Row>  
             <Row>
                 <Col>
-                    <img src={image} alt="wallet-image" />
+                    <img src={image} alt="wallet-image" className="wallet-image"/>
                 </Col>
             </Row>
             <Row>
@@ -44,7 +44,7 @@ export default function Wallet(){
             </Row>
             <Row>
                 <Col>
-                    <Button href={`${website}`}>Visit Website</Button>
+                    <Button href={`${website}`} className="visit-wallet-button">Visit Website</Button>
                 </Col>
             </Row>
         </Container>

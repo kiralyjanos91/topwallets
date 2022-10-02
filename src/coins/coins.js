@@ -6,6 +6,11 @@ import coinIcons from "./coinicons"
 
 export default function Coins({ coinlist }){
 
+    const priceFormat = new Intl.NumberFormat("en-us",{
+        style:"currency",
+        currency:"USD"
+    })
+
     const coinList = Object.entries(coinlist).map((coin)=>
         <Col md="3" key={coin[0]}>
             <Link to={`/coins/${coin[0]}`}>
@@ -15,7 +20,7 @@ export default function Coins({ coinlist }){
                         {coin[0]}
                     </p>
                     <p>
-                        {`Price: $${coin[1].usd}`}
+                        {`Price: ${priceFormat.format(coin[1].usd)}`}
                     </p>
                 </div>
             </Link>

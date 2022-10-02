@@ -10,6 +10,7 @@
 }
 
 .header-blur{
+    min-height: 100vh;
     backdrop-filter: blur(10px) brightness(60%);
     padding-top:90px !important;
     padding-bottom:90px !important;
@@ -19,12 +20,17 @@
 
 .header-blur{
     color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    row-gap: 30px;
+    margin-bottom: 30px;
 }
 
 .header-buttons {

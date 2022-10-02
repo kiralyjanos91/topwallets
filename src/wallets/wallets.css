@@ -3,3 +3,42 @@
     padding-top:150px;
     margin-bottom:100px;
 }
+
+.wallets-list-row{
+    display: flex;
+    min-height: fit-content;
+    height: fit-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    color: #e9ecef;
+    font-size: 20px;
+    background-color: #1c1e21;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.wallets-list-row:hover{
+    background-color:#202327;
+}
+
+.wallets-list{
+    margin-top:50px;
+}
+
+.wallet-rank{
+    font-size: 34px;
+}
+
+p{
+    margin:0;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+}
+
+a:hover{
+    color:white
+}

@@ -27,21 +27,31 @@ const walletsData = [
         id:"2"
     },
     {
-        name:"numberthree",
+        name:"Exodus",
         rating:4.5,
-        rank:"1",
-        description:"asdadssada",
-        website:"asdasdasdsa",
-        image:"",
+        rank:"3",
+        description:`
+        Exodus is a hot wallet, which means it's a software wallet that's connected to the internet; but it's noncustodial, which means that only you have access to your private key -- a 12-word password phrase that protects access to your crypto assets. 
+        The Exodus wallet is designed to run on Mac, Windows and Linux computers, though there's a companion app available for Android and iOS devices. The desktop user interface is slick and easy to learn. Your wallet is seamlessly integrated into the Exodus exchange, so it's easy to make transactions. 
+        Exodus supports more than 260 types of cryptocurrency including bitcoin, ether, tether USD and dogecoin. But the exchange has some noteworthy limits: If you want to purchase crypto with US dollars and store it in the Exodus wallet, you'll need to first purchase the asset on a centralized crypto exchange, such as Coinbase, and then transfer the assets to Exodus. The app version allows purchases of bitcoin with US dollars. And once you have an asset in your wallet, it can be easily exchanged for other supported assets. While the wallet itself is free to use, Exodus charges a fee for transactions made via its exchange.
+        Hot storage wallets are generally considered less secure than cold storage wallets, and some Exodus users may eventually want to upgrade to cold storage. The good news: Exodus is fully compatible with Trezor's One and Model T hardware.
+        `,
+        website:"https://www.exodus.com/",
+        image:"https://www.cnet.com/a/img/resize/37acadee07457e376227e5a5c8c2848785d71e16/hub/2021/07/26/2a85a0f6-393f-4719-9da2-6204a7ca95ec/exodus.png?auto=webp&fit=crop&height=362&width=644",
         id:"3"
     },
     {
-        name:"numberfour",
+        name:"Mycelium",
         rating:4,
-        rank:"1",
-        description:"asdadssada",
-        website:"asdasdasdsa",
-        image:"4"
+        rank:"4",
+        description:`
+        Mycelium has been around since the beginning of the crypto era, and the Mycelium wallet is one of the oldest and best-known bitcoin wallets. This is a mobile-only wallet -- there is currently no desktop version -- that supports both Android and iOS. 
+        The Mycelium wallet has an appealingly simple interface but it supports fewer kinds of crypto than others profiled here: You can send and receive bitcoin, ether and ERC-20 tokens such as tether USD, USD coin and binance USD -- but not the hundreds of esoteric coins that have been developed over the past few years. You can buy and sell bitcoin directly in the app, and Mycelium lets you buy bitcoin with regular fiat currency. 
+        The Mycelium wallet is noncustodial, so you'll have sole access to your private key and PIN. This wallet is also the only hot storage wallet on our list that's completely open-source. Though there are security advantages in that, it also comes with limited tech support options; basically, if you get stuck, you can submit a help ticket to the email address listed at the bottom of the webpage. 
+        For more advanced users, Mycelium supports QR codes, allows you to set custom transaction fees and offers compatibility with hardware wallets from Trezor, Ledger and KeepKey. 
+        `,
+        website:"https://wallet.mycelium.com/",
+        image:"https://www.cnet.com/a/img/resize/a4e7d830edc9a3943c3ba160d30bfc66e1102468/hub/2018/03/29/782b5709-b668-4f72-937f-31eb1c1a06de/mycelium.png?auto=webp&fit=crop&height=362&width=644"
     },
     {
         name:"numberfive",

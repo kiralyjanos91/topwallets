@@ -1,0 +1,31 @@
+.news-list{
+    margin-top: 100px;
+    color:white;
+}
+
+.news-headline{
+    margin-top:150px;
+    margin-bottom:50px;
+}
+
+.news-list-item-row{
+    min-height: 120px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid grey;
+}
+
+.news-spinner-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 300px);
+}
+
+.pagination{
+    background-color:rgba(255, 0, 0, 0)(0, 0, 0);
+    color:white;
+}

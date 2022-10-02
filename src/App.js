@@ -10,6 +10,7 @@ import Coins from './coins/coins';
 import Coin from './coin/coin';
 import Footer from './footer/footer';
 import { Container } from 'react-bootstrap';
+import NewsList from './newslist/newslist';
 
 export default function App() {
   const [ coinList , setCoinList ] = useState("")
@@ -42,6 +43,7 @@ export default function App() {
         <Route path="/wallets" element={<Wallets />} />
         <Route path="/wallets/:walletName" element={<Wallet />} />
         <Route path="/coins" element={<Coins coinlist={coinList} />} />
+        <Route path="/news/:page" element={<NewsList />} />
       </Routes>
       <Footer />
     </Container>

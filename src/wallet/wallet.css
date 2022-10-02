@@ -5,3 +5,15 @@
 .wallet-name{
     margin-top:100px;
 }
+
+.wallet-image{
+    max-width: 300px;
+    border-radius: 5px;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.visit-wallet-button{
+    margin-top:50px;
+    margin-bottom:100px;
+}

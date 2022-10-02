@@ -1,13 +1,25 @@
-.menu{
-    background-color:grey;
-    margin-bottom:-56px;
-    z-index:1;
-}
 
+@media (min-width: 992px)
+{
+   .navbar-expand-lg {
+        margin-bottom:-56px;
+        z-index:1
+    }
+}
+    
 .navbar-brand{
     color:white;
+    padding:0px;
 }
 
 .nav-link{
     color:white;
+}
+
+.nav-link:hover, .nav-link:active, .nav-link:visited, nav-link:focus {
+    color:white
+}
+
+.logo{
+    height:32px;
 }

@@ -9,21 +9,23 @@ export default function Wallets(){
 
     const walletsList = walletsData.map((wallet,index)=>
         <Link to={`/wallets/${wallet.name}`} key={index}>
-            <Row>
-                <Col md="4"><p>{index+1}</p></Col>
+            <Row className="wallets-list-row">
+                <Col md="4" className="wallet-rank"><p>{index+1}.</p></Col>
                 <Col md="4"><p>{wallet.name}</p></Col>
                 <Col md="4">
                     <StarRating rating={wallet.rating} />
                 </Col>
             </Row>
-            {wallet.id !== walletsData.length.toString() &&
-                <hr />
-            }
         </Link>
     )
     return(
         <Container className="wallets-container">
-            {walletsList}
+            <Row>
+                <h1>Top Wallets</h1>
+            </Row>
+            <Row className="wallets-list">
+                {walletsList}
+            </Row>
         </Container>
     )
 }

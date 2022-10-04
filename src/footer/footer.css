@@ -1,10 +1,10 @@
 .footer-container{
-    background-color:rgb(0, 0, 0);
-    color:white;
+    background-color: #000b0c;
+    color: white;
 }
 
 .footer-row{
-    margin:0;
+    margin: 0;
 }
 
 .footer-image-col{
@@ -14,12 +14,12 @@
 }
 
 .footer-logo{
-    height:40px;
-    filter:opacity(20%)
+    height: 40px;
+    filter: opacity(20%)
 }
 
 .footer-link-list{
-    cursor:pointer;
+    cursor: pointer;
     list-style-type: none;
-    filter:opacity(20%);
+    filter: opacity(20%);
 }

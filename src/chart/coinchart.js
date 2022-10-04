@@ -30,7 +30,7 @@ export default function CoinChart({ sevenDaysPrice , currentPrice , timePeriod }
                     {
                         label: 'Penultimate',
                         data: penultimateChartData,
-                        borderColor:"#00FEFF",
+                        borderColor:"#FFFFFF",
                         borderWidth:"1",
                         fill:false,
                         drawBorder:false

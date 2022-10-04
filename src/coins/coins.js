@@ -16,10 +16,10 @@ export default function Coins({ coinlist }){
             <Link to={`/coins/${coin[0]}`}>
                 <div className="coin-list-element">
                     <img src={coinIcons[coin[0]]} alt={coinIcons[coin[0]]} />
-                    <p>
+                    <p className="coin-list-coin-name">
                         {coin[0]}
                     </p>
-                    <p>
+                    <p className="coin-list-price">
                         {`Price: ${priceFormat.format(coin[1].usd)}`}
                     </p>
                 </div>

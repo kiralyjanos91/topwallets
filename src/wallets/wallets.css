@@ -1,7 +1,14 @@
 .wallets-container{
-    color:white;
-    padding-top:150px;
-    margin-bottom:100px;
+    color: white;
+    padding-top: 150px;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 991px) {
+    .wallets-container{
+        padding-top: 50px;
+        margin-bottom: 50px;
+    }
 }
 
 .wallets-list-row{
@@ -11,19 +18,18 @@
     padding-top: 20px;
     padding-bottom: 20px;
     align-items: center;
-    color: #e9ecef;
     font-size: 20px;
-    background-color: #1c1e21;
+    background-color: #001317;
     border-radius: 5px;
     margin-top: 20px;
 }
 
 .wallets-list-row:hover{
-    background-color:#202327;
+    background-color: #001013;
 }
 
 .wallets-list{
-    margin-top:50px;
+    margin-top: 50px;
 }
 
 .wallet-rank{
@@ -31,14 +37,14 @@
 }
 
 p{
-    margin:0;
+    margin: 0;
 }
 
 a{
-    color:white;
+    color: #e9ecefeb;
     text-decoration: none;
 }
 
 a:hover{
-    color:white
+    color: white
 }

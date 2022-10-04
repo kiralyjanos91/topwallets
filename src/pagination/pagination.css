@@ -1,5 +1,13 @@
 .pagination{
     justify-content: center;
-    margin-top:50px;
-    margin-bottom:100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    background-color: rgba(255, 0, 0, 0)(0, 0, 0);
+    color: white;
+}
+
+.page-link{
+    color: #e9ecefeb;
+    border-color: #e9ecefeb;
+    background-color: transparent;
 }

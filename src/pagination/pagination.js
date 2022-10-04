@@ -9,7 +9,7 @@ export default function NewsPagination({ pages , activePage }){
     let items = [];
     for (let i = 1; i <= pages; i++) {
         items.push(
-            <Pagination.Item onClick={()=>navigate(`/news/${i}`)} key={i} active={i == activePage}>
+            <Pagination.Item onClick={()=>navigate(`/news/${i}`)} key={i} active={i === Number(activePage)}>
                 {i}
             </Pagination.Item>
         )

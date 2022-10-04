@@ -20,7 +20,7 @@ export default function App() {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '56bd2c0a8bmshb28498e9bd62633p1d4ce4jsn48be7ca34c90',
+        'X-RapidAPI-Key': 'Coingecko Api Key',
         'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
       }
     };
@@ -38,7 +38,7 @@ export default function App() {
     <Container className="App" fluid>
       <Menu />
       <Routes>
-        <Route path="/" element={<Home coinlist={coinList} />} />
+        <Route path="/" element={<Home />} />
         <Route path="/coins/:coinId" element={<Coin />} />
         <Route path="/wallets" element={<Wallets />} />
         <Route path="/wallets/:walletName" element={<Wallet />} />

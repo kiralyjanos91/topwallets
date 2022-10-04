@@ -8,8 +8,14 @@ const walletsData = [
         If you're new to cryptocurrency, the Coinbase Wallet is a good place to start. It can be downloaded as an app for Android or iOS, the interface is intuitive and the wallet is fully integrated with the company's exchange, which makes it easy to conduct transactions -- including purchasing coins and tokens with traditional currency. 
         Unlike the company's exchange, the Coinbase Wallet is noncustodial; that means that only you have access to your wallet's private key, which is generated with a 12-word recovery phrase when you sign up. Note that there's a difference between storing your cryptocurrency on Coinbase's exchange, which is custodial, and the wallet, which is not. But the integration between them makes it fairly simple to transfer funds back and forth.
         `,
+        bullets:[
+            "Type of wallet: Mobile, web",
+            "Purchase cost: Free",
+            "Own exchange incorporated: Yes",
+            "Ease of Use: Very easy"
+        ],
         website:"https://www.coinbase.com/",
-        image:"https://www.cnet.com/a/img/resize/54a5d914c1307702780ac5d776e421a019d5cac4/hub/2021/02/25/957d75f3-a76d-4f0b-9762-bb705e780b29/coinbase-crypto-cryptocurrency-bitcoin-trading-3047.jpg?auto=webp&fit=crop&height=362&width=644",
+        image:"https://cryptowallet.com/app/uploads/2021/04/wallet-review-coinbase-logo.png",
         id:"1"
     },
     {
@@ -22,8 +28,14 @@ const walletsData = [
         Trezor Suite is designed to run natively on your desktop, which generally provides greater security than a web-based app, though you can also access Trezor Suite through the company's website. Trezor wallets currently support more than 1,800 coins and tokens, and you can make transactions directly in Trezor Suite with the company's integrated exchange. 
         Shaped like an old-school stopwatch, the Model T comes with a touchscreen and a USB cable to connect to your computer; it also features a microSD card if you want to add encrypted storage directly to your hardware wallet. It does not feature Bluetooth support, however -- an omission that some security advocates prefer, as Bluetooth connectivity could be an attack vector for hackers to exploit. 
         `,
+        bullets:[
+            "Type of wallet: Hardware",
+            "Purchase cost: £169",
+            "Own exchange incorporated: No",
+            "Ease of Use: Advanced"
+        ],
         website:"https://shop.trezor.io/",
-        image:"https://www.cnet.com/a/img/resize/b0f6b8b2e6deb6df6b1426a0b82568189b471d28/hub/2021/07/26/2700867e-b6ae-48e9-9ff1-fac516db3a45/trezor-logo-1.png?auto=webp&fit=crop&height=362&width=644",
+        image:"https://cryptowallet.com/app/uploads/2021/04/wallet-review-trezor-logo.png",
         id:"2"
     },
     {
@@ -36,8 +48,14 @@ const walletsData = [
         Exodus supports more than 260 types of cryptocurrency including bitcoin, ether, tether USD and dogecoin. But the exchange has some noteworthy limits: If you want to purchase crypto with US dollars and store it in the Exodus wallet, you'll need to first purchase the asset on a centralized crypto exchange, such as Coinbase, and then transfer the assets to Exodus. The app version allows purchases of bitcoin with US dollars. And once you have an asset in your wallet, it can be easily exchanged for other supported assets. While the wallet itself is free to use, Exodus charges a fee for transactions made via its exchange.
         Hot storage wallets are generally considered less secure than cold storage wallets, and some Exodus users may eventually want to upgrade to cold storage. The good news: Exodus is fully compatible with Trezor's One and Model T hardware.
         `,
+        bullets:[
+            "Type of wallet: Mobile and desktop",
+            "Purchase cost: Free",
+            "Own exchange incorporated: Yes",
+            "Ease of Use: Easy"
+        ],
         website:"https://www.exodus.com/",
-        image:"https://www.cnet.com/a/img/resize/37acadee07457e376227e5a5c8c2848785d71e16/hub/2021/07/26/2a85a0f6-393f-4719-9da2-6204a7ca95ec/exodus.png?auto=webp&fit=crop&height=362&width=644",
+        image:"https://cryptowallet.com/app/uploads/2021/04/wallet-review-exodus-logo.png",
         id:"3"
     },
     {
@@ -50,25 +68,47 @@ const walletsData = [
         The Mycelium wallet is noncustodial, so you'll have sole access to your private key and PIN. This wallet is also the only hot storage wallet on our list that's completely open-source. Though there are security advantages in that, it also comes with limited tech support options; basically, if you get stuck, you can submit a help ticket to the email address listed at the bottom of the webpage. 
         For more advanced users, Mycelium supports QR codes, allows you to set custom transaction fees and offers compatibility with hardware wallets from Trezor, Ledger and KeepKey. 
         `,
+        bullets:[
+            "Type of wallet: Mobile",
+            "Purchase cost: Free",
+            "Own exchange incorporated: No",
+            "Ease of Use: Intermediate"
+        ],
         website:"https://wallet.mycelium.com/",
-        image:"https://www.cnet.com/a/img/resize/a4e7d830edc9a3943c3ba160d30bfc66e1102468/hub/2018/03/29/782b5709-b668-4f72-937f-31eb1c1a06de/mycelium.png?auto=webp&fit=crop&height=362&width=644"
+        image:"https://cryptowallet.com/app/uploads/2021/04/wallet-review-mycelium-logo.png"
     },
     {
-        name:"numberfive",
+        name:"Ledger",
         rating:4,
         rank:"5",
-        description:"asdadssada",
-        website:"asdasdasdsa",
-        image:"",
+        description:`
+        The Ledger Nano S is the most secure way to store your cryptocurrency, thanks to the company’s robust security protocols. Beginner or occasional investors will have peace of mind knowing their assets are secure offline, yet they can easily access their crypto or view their accounts when using the physical device.
+        `,
+        bullets:[
+            "Type of wallet: Hardware",
+            "Purchase cost: £109",
+            "Own exchange incorporated: No",
+            "Ease of Use: Advanced"
+        ],
+        website:"https://www.ledger.com/",
+        image:"https://cryptowallet.com/app/uploads/2021/04/wallet-review-ledger-logo.png",
         id:"5"
     },
     {
-        name:"numbersix",
+        name:"SoFi",
         rating:3.5,
         rank:"6",
-        description:"asdadssada",
-        website:"asdasdasdsa",
-        image:"",
+        description:`
+        SoFi takes a modern approach to personal finance. It recently created buzz with the release of SoFi Crypto, a way to trade cryptocurrency on the app. The platform allows investors to familiarize themselves with crypto. It offers a high level of security, great customer support and an intuitive interface. However, it does have shortcomings with the number of cryptos offered and geographic restrictions.
+        `,
+        bullets:[
+            "Type of wallet: Mobile",
+            "Purchase cost: Free",
+            "Own exchange incorporated: Yes",
+            "Ease of Use: Easy"
+        ],
+        website:"https://www.sofi.com/",
+        image:"https://cryptowallet.com/app/uploads/2021/04/wallet-review-sofi-logo.png",
         id:"6"
     }
 ]

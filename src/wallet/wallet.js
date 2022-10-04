@@ -15,8 +15,15 @@ export default function Wallet(){
         description, 
         website, 
         image, 
-        id 
+        id,
+        bullets 
     } = walletsData.find((data)=>data.name === walletName) 
+
+    const bulletsList = bullets.map((bullet,index)=>
+        <Row key={index}>
+            <li >{bullet}</li>
+        </Row>
+    )
 
     return(
         <Container className="wallet">
@@ -32,12 +39,17 @@ export default function Wallet(){
                     <StarRating rating={rating} />
                 </Col>
             </Row>  
-            <Row>
-                <Col>
-                    <img src={image} alt="wallet-image" className="wallet-image"/>
+            <Row className="wallet-img-and-bullets-row">
+                <Col className="wallet-img-col">
+                    <img src={image} alt={image} className="wallet-image"/>
+                </Col>
+                <Col className="bullets-col">
+                    <ul>
+                        {bulletsList}
+                    </ul>
                 </Col>
             </Row>
-            <Row>
+            <Row className="description-row">
                 <Col>
                     {description}
                 </Col>

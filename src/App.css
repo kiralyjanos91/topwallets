@@ -1,14 +1,27 @@
+@font-face {
+  font-family: encode-sans;
+  src: url(./fonts/EncodeSans-VariableFont_wdth,wght.ttf);
+}
+
+
 .App {
   text-align: center;
   max-width: 100%;
-  background-color:#0d0d0d;
+  background-color: #012127;
+  color: #e9ecefeb;
+}
+
+h1{
+  font-family: encode-sans;
+  font-weight: 600px;
+  color: white
 }
 
 .container-fluid{
-  padding:0 !important;
+  padding: 0 !important;
 }
 
 .row{
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }

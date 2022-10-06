@@ -1,7 +1,7 @@
 .coins-headline{
     color: white;
     margin-top: 150px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 @media (max-width: 991px) {
@@ -9,6 +9,13 @@
         margin-top: 50px;
         margin-bottom: 50px;
     }
+}
+
+.spinner-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
 }
 
 .coin-list{

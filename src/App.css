@@ -13,7 +13,7 @@
 
 h1{
   font-family: encode-sans;
-  font-weight: 600px;
+  font-weight: 600 !important;
   color: white
 }
 
@@ -24,4 +24,16 @@ h1{
 .row{
   padding: 0;
   margin: 0;
+}
+
+.goback{
+  cursor: pointer;
+  margin-top:100px;
+  text-align: left;
+}
+
+@media (max-width:992px){
+  .goback{
+    margin-top:30px;
+  }
 }

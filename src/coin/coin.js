@@ -1,7 +1,8 @@
 import React, { useEffect , useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams , useNavigate , Link } from "react-router-dom"
 import { Row , Col , Container } from "react-bootstrap"
 import Spinner from "react-bootstrap/Spinner"
+import Button from "react-bootstrap/Button"
 import "./coin.css"
 import CoinChart from "../chart/coinchart";
 import parse from 'html-react-parser'
@@ -16,14 +17,16 @@ export default function Coin(){
     })
     
     const selectedStyle = {
-        color:"grey"
+        textDecoration:"underline"
     }
+
+    const navigate = useNavigate()
 
     useEffect(()=>{
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'Coingecko Api Key',
+                'X-RapidAPI-Key': 'RapidApi CoinGecko Key',
                 'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
             }
         };
@@ -34,11 +37,18 @@ export default function Coin(){
             .catch(err => console.error(err));
     },[])
 
+    console.log(coinInfo)
+
     return (
         <Container className="coin-body">
             <Row>
                 <Col>
-                    {Object.keys(coinInfo).length > 0 ?
+                    <p className="goback" onClick={()=>{navigate(-1)}}>{"← Coins"}</p>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    {coinInfo.id ?
                         (
                             <Row className="coin-data">
                                 <Col className="coin-headline">
@@ -48,16 +58,16 @@ export default function Coin(){
                                     </h1>
                                 </Col>
                                 <Row>
-                                    <Row>
+                                    <Row className="time-perios-row">
                                         <Col className="chart-time-period-text">
                                             <p onClick={()=>setChartDays(1)} style={chartDays === 1 ? selectedStyle : null}>
-                                                1D
+                                                1d
                                             </p>
                                             <p onClick={()=>setChartDays(2)} style={chartDays === 2 ? selectedStyle : null}>
-                                                2D
+                                                2d
                                             </p>
                                             <p onClick={()=>setChartDays(3)} style={chartDays === 3 ? selectedStyle : null}>
-                                                3D
+                                                3d
                                             </p>
                                         </Col>
                                     </Row>
@@ -77,9 +87,22 @@ export default function Coin(){
                                         {`Market cap: ${priceFormat.format(coinInfo.market_data.market_cap.usd)}`}
                                     </Col>
                                 </Row>
+                                <Row className="coin-buttons-row">
+                                    <Col className="coin-button">
+                                        <Button href={coinInfo.links.homepage[0]} target="_blank">Visit Website</Button>
+                                    </Col>
+                                    <Col className="coin-button">
+                                        <Link to="/wallets">
+                                            <Button>Check Top Wallets</Button>
+                                        </Link>
+                                    </Col>
+                                </Row>
+                                <Row className="coin-description-headline">
+                                    <hr />
+                                    <h2>Coin description:</h2>
+                                </Row>
                                 <Row>
                                     <Col className="coin-description">
-                                        <hr />
                                         {
                                             parse(coinInfo.description.en)
                                         }

@@ -1,6 +1,5 @@
 .coin-body{
     min-height: 100vh;
-    margin-top: 56px;
     justify-content: center;
 }
 
@@ -34,6 +33,10 @@
     height: calc(100vh - 100px);
 }
 
+.time-perios-row{
+    margin:0;
+}
+
 .chart-time-period-text{
     display: flex;
     justify-content: center;
@@ -44,6 +47,23 @@
 
 .chart-col{
     padding: 0;
+}
+
+.coin-buttons-row{
+    justify-content: center;
+    margin-top:50px;
+}
+
+.coin-button{
+    max-width: fit-content;
+}
+
+.coin-description-headline{
+    margin-top:50px;
+}
+
+.coin-description-headline > hr{
+    margin-bottom:50px;
 }
 
 .coin-description{

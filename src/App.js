@@ -20,7 +20,7 @@ export default function App() {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'Coingecko Api Key',
+        'X-RapidAPI-Key': 'RapidApi CoinGecko Key',
         'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
       }
     };
@@ -28,12 +28,13 @@ export default function App() {
     fetch('https://coingecko.p.rapidapi.com/simple/price?ids=bitcoin%2Cethereum%2Ctether%2Cusd-coin%2Cbinancecoin%2Cripple%2Cbinance-usd%2Ccardano%2Csolana%2Cdogecoin%2Cpolkadot%2Cdai&vs_currencies=usd', options)
       .then(response => response.json())
       .then(response => setCoinList(response))
+      .catch(err => console.log(err)) 
   },[])
 
   useEffect(()=>{
     document.documentElement.scrollTo(0, 0);
   },[location.pathname])
-
+  
   return (
     <Container className="App" fluid>
       <Menu />

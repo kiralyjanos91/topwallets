@@ -1,10 +1,11 @@
 .wallet-name{
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 .wallet-image{
     filter: opacity(0.8);
-    max-width: 300px;
+    width: 300px;
+    max-width: 100%;
     border-radius: 5px;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -17,7 +18,8 @@
 }
 
 .description-row{
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-bottom: 80px;
 }
 
 .bullets-col > ul{
@@ -33,13 +35,19 @@ hr{
     margin: 0;
 }
 
-.visit-wallet-button{
+.wallet-buttons-row
+{   justify-content: center;
     margin-top: 50px;
     margin-bottom: 100px;
 }
 
+.wallet-buttons{
+    max-width: fit-content;
+}
+
 .wallet-img-and-bullets-row{
     justify-content: center;
+    margin-top:30px;
 }
 
 .wallet-img-col, .bullets-col{

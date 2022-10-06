@@ -26,14 +26,20 @@ export default function Coins({ coinlist }){
             </Link>
         </Col>
     )
-
+     console.log(coinList)
     return(
         <Container className="coins">
             <Row className="coins-headline">
                 <h1>Top Coins</h1>
             </Row>
             <Row className="coin-list">
-                {coinList}
+                {coinList.length > 1 ? 
+                    coinList 
+                :
+                    
+                <p>Server Overloaded - Please try again later</p>
+                    
+                }
             </Row>
         </Container>
     )

@@ -1,5 +1,5 @@
 import React from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams , Link } from "react-router-dom"
 import { Col , Row , Container , Button } from "react-bootstrap"
 import walletsData from "../wallets/wallets-data"
 import StarRating from "../star-rating/star-rating"
@@ -8,14 +8,13 @@ import "./wallet.css"
 export default function Wallet(){
 
     const { walletName } = useParams()
+    const navigate = useNavigate()
     const { 
         name,
         rating, 
-        rank, 
         description, 
         website, 
         image, 
-        id,
         bullets 
     } = walletsData.find((data)=>data.name === walletName) 
 
@@ -27,6 +26,11 @@ export default function Wallet(){
 
     return(
         <Container className="wallet">
+            <Row>
+                <Col>
+                    <p className="goback" onClick={()=>{navigate(-1)}}>{"← Wallets"}</p>
+                </Col>
+            </Row>
             <Row className="wallet-name">
                 <Col>
                     <h1>
@@ -40,10 +44,10 @@ export default function Wallet(){
                 </Col>
             </Row>  
             <Row className="wallet-img-and-bullets-row">
-                <Col className="wallet-img-col">
+                <Col className="wallet-img-col" md="6">
                     <img src={image} alt={image} className="wallet-image"/>
                 </Col>
-                <Col className="bullets-col">
+                <Col className="bullets-col" md="6">
                     <ul>
                         {bulletsList}
                     </ul>
@@ -54,9 +58,14 @@ export default function Wallet(){
                     {description}
                 </Col>
             </Row>
-            <Row>
-                <Col>
-                    <Button href={`${website}`} className="visit-wallet-button">Visit Website</Button>
+            <Row className="wallet-buttons-row">
+                <Col className="wallet-buttons" md="6">
+                    <Button href={`${website}`} target="_blank">Visit Website</Button>
+                </Col>
+                <Col className="wallet-buttons" md="6">
+                    <Link to="/coins">
+                        <Button>Check Top Coins</Button>
+                    </Link>
                 </Col>
             </Row>
         </Container>

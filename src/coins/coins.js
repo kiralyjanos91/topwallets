@@ -35,10 +35,8 @@ export default function Coins({ coinlist }){
             <Row className="coin-list">
                 {coinList.length > 1 ? 
                     coinList 
-                :
-                    
-                <p>Server Overloaded - Please try again later</p>
-                    
+                :   
+                    <p>Server Overloaded - Please try again later</p>      
                 }
             </Row>
         </Container>

@@ -6,7 +6,7 @@ export default function NewsListElement({ title , source , url }){
         <Row className="news-list-item-row">
             <Col md="9">{title}</Col>
             <Col md="3" className="news-button-col">
-                <Button href={url}>
+                <Button href={url} target="_blank">
                     {`Read it at ${source}`}
                 </Button>
             </Col>

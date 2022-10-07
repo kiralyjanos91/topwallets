@@ -15,7 +15,7 @@ export default function Header(){
                             <Row className="header-buttons-row">
                                 <Col className="header-buttons">
                                     <Link to="/wallets">
-                                        <Button>Check it now</Button>
+                                        <Button>Check Them Now</Button>
                                     </Link>
                                     <Link to="/coins">
                                         <Button>Check Coins</Button>

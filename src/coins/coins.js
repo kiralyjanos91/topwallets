@@ -29,8 +29,11 @@ export default function Coins({ coinlist }){
      console.log(coinList)
     return(
         <Container className="coins">
-            <Row className="coins-headline">
-                <h1>Top Coins</h1>
+            <Row className="headline-text-row">
+                <Row className="headline-text-row-inner coins-headline">
+                    <h1>Top Coins</h1>
+                    <div className="gradient-hr" />
+                </Row>
             </Row>
             <Row className="coin-list">
                 {coinList.length > 1 ? 

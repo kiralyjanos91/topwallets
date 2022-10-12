@@ -20,8 +20,11 @@ export default function Wallets(){
     )
     return(
         <Container className="wallets-container">
-            <Row>
-                <h1>Top Wallets</h1>
+            <Row className="headline-text-row">
+                <Row className="headline-text-row-inner">
+                    <h1>Top Wallets</h1>
+                    <div className="gradient-hr" />
+                </Row>
             </Row>
             <Row className="wallets-list">
                 {walletsList}

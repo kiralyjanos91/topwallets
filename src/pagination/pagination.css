@@ -11,3 +11,12 @@
     border-color: #e9ecefeb;
     background-color: transparent;
 }
+
+.active > .page-link {
+    background-color: #008a91 !important;
+    border-color: #008a91 !important;
+}
+
+.page-link:hover{
+    color: #008a91 !important;
+}

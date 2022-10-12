@@ -39,8 +39,11 @@ export default function NewsList(){
 
     return(
         <Container className="news-list">
-            <Row className="news-headline">
-                <h1>Crypto News</h1>
+            <Row className="headline-text-row">
+                <Row className="headline-text-row-inner news-headline">
+                    <h1>Crypto News</h1>
+                    <div className="gradient-hr" />
+                </Row>
             </Row>
             {
                 newsListData.length > 0 ?

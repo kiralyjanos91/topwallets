@@ -1,3 +1,10 @@
+import coinbaseImg from "../images/coinbase.png"
+import trezorImg from "../images/trezor.png"
+import exodusImg from "../images/exodus.png"
+import myceliumImg from "../images/mycelium.png"
+import ledgerImg from "../images/ledger.png"
+import sofiImg from "../images/sofi.png"
+
 const walletsData = [
     {
         name:"Coinbase",
@@ -15,7 +22,7 @@ const walletsData = [
             "Ease of Use: Very easy"
         ],
         website:"https://www.coinbase.com/",
-        image:"https://cryptowallet.com/app/uploads/2021/04/wallet-review-coinbase-logo.png",
+        image:coinbaseImg,
         id:"1"
     },
     {
@@ -35,7 +42,7 @@ const walletsData = [
             "Ease of Use: Advanced"
         ],
         website:"https://shop.trezor.io/",
-        image:"https://cryptowallet.com/app/uploads/2021/04/wallet-review-trezor-logo.png",
+        image:trezorImg,
         id:"2"
     },
     {
@@ -55,7 +62,7 @@ const walletsData = [
             "Ease of Use: Easy"
         ],
         website:"https://www.exodus.com/",
-        image:"https://cryptowallet.com/app/uploads/2021/04/wallet-review-exodus-logo.png",
+        image:exodusImg,
         id:"3"
     },
     {
@@ -75,7 +82,8 @@ const walletsData = [
             "Ease of Use: Intermediate"
         ],
         website:"https://wallet.mycelium.com/",
-        image:"https://cryptowallet.com/app/uploads/2021/04/wallet-review-mycelium-logo.png"
+        image:myceliumImg,
+        id:"4"
     },
     {
         name:"Ledger",
@@ -91,7 +99,7 @@ const walletsData = [
             "Ease of Use: Advanced"
         ],
         website:"https://www.ledger.com/",
-        image:"https://cryptowallet.com/app/uploads/2021/04/wallet-review-ledger-logo.png",
+        image:ledgerImg,
         id:"5"
     },
     {
@@ -108,7 +116,7 @@ const walletsData = [
             "Ease of Use: Easy"
         ],
         website:"https://www.sofi.com/",
-        image:"https://cryptowallet.com/app/uploads/2021/04/wallet-review-sofi-logo.png",
+        image:sofiImg,
         id:"6"
     }
 ]

@@ -31,6 +31,13 @@
     text-align: left;
 }
 
+.bullets-col > ul > div > li{
+    background-color:#00000029;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
 hr{
     margin: 0;
 }

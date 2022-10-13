@@ -47,6 +47,11 @@
 
 .chart-col{
     padding: 0;
+    background-color: #00000029;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .coin-buttons-row{

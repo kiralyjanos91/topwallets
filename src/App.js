@@ -15,20 +15,30 @@ import NewsList from './newslist/newslist';
 export default function App() {
   const [ coinList , setCoinList ] = useState("")
   const location = useLocation()
+  const [ errorFetch , setErrorFetch ] = useState(false)
 
   useEffect(()=>{
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'RapidApi Key',
+        'X-RapidAPI-Key': 'RapidaApi Key',
         'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
       }
     };
     
     fetch('https://coingecko.p.rapidapi.com/simple/price?ids=bitcoin%2Cethereum%2Ctether%2Cusd-coin%2Cbinancecoin%2Cripple%2Cbinance-usd%2Ccardano%2Csolana%2Cdogecoin%2Cpolkadot%2Cdai&vs_currencies=usd', options)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok)
+          {
+            throw new Error(response.status)
+          }
+        return response.json()
+      })
       .then(response => setCoinList(response))
-      .catch(err => console.log(err)) 
+      .catch(err => {
+        setErrorFetch(true)
+        console.log(`Failed Fetch. Error Code:${err}`)
+      }) 
   },[])
 
   useEffect(()=>{
@@ -43,7 +53,7 @@ export default function App() {
         <Route path="/coins/:coinId" element={<Coin />} />
         <Route path="/wallets" element={<Wallets />} />
         <Route path="/wallets/:walletName" element={<Wallet />} />
-        <Route path="/coins" element={<Coins coinlist={coinList} />} />
+        <Route path="/coins" element={<Coins isError={errorFetch} coinlist={coinList} />} />
         <Route path="/news/:page" element={<NewsList />} />
       </Routes>
       <Footer />

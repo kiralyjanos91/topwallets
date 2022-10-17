@@ -1,10 +1,11 @@
 import React from "react"
 import { Col , Container , Row } from "react-bootstrap"
+import Spinner from "react-bootstrap/Spinner"
 import { Link } from "react-router-dom"
 import "./coins.css"
 import coinIcons from "./coinicons"
 
-export default function Coins({ coinlist }){
+export default function Coins({ coinlist , isError }){
 
     const priceFormat = new Intl.NumberFormat("en-us",{
         style:"currency",
@@ -26,7 +27,7 @@ export default function Coins({ coinlist }){
             </Link>
         </Col>
     )
-     console.log(coinList)
+
     return(
         <Container className="coins">
             <Row className="headline-text-row">
@@ -36,10 +37,15 @@ export default function Coins({ coinlist }){
                 </Row>
             </Row>
             <Row className="coin-list">
-                {coinList.length > 1 ? 
-                    coinList 
-                :   
+                {isError ? 
                     <p>Server Overloaded - Please try again later</p>      
+                        :   
+                    coinList.length > 1 ? 
+                        coinList
+                    :
+                        <Col className="spinner-col">
+                            <Spinner animation="border" variant="light" />
+                        </Col>
                 }
             </Row>
         </Container>

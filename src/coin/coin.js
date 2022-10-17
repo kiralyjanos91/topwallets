@@ -11,6 +11,8 @@ export default function Coin(){
     const { coinId } = useParams()
     const [ coinInfo , setCoinInfo ] = useState({})
     const [ chartDays , setChartDays ] = useState(1)
+    const [ coinFetchError , setCoinFetchError ] = useState(false)
+
     const priceFormat = new Intl.NumberFormat("en-us",{
         style:"currency",
         currency:"USD"
@@ -26,18 +28,25 @@ export default function Coin(){
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'RapidApi Key',
+                'X-RapidAPI-Key': 'RapidaApi Key',
                 'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
             }
         };
         
         fetch(`https://coingecko.p.rapidapi.com/coins/${coinId}?localization=true&tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true`, options)
-            .then(response => response.json())
+            .then(response => {
+                if(!response.ok)
+                    {
+                        throw new Error("Failed Fetch")
+                    }
+                return response.json()
+            })
             .then(response => setCoinInfo(response))
-            .catch(err => console.error(err));
+            .catch(err => {
+                setCoinFetchError(true)
+                console.error(`Failed fetch. Error Code:${err}`)
+            });
     },[])
-
-    console.log(coinInfo)
 
     return (
         <Container className="coin-body">
@@ -48,7 +57,14 @@ export default function Coin(){
             </Row>
             <Row>
                 <Col>
-                    {coinInfo.id ?
+                    {coinFetchError ?
+                    <Col className="error-col">
+                        <p className="errormessage">
+                            Server overloaded - Please try again later
+                        </p>
+                    </Col>
+                    :
+                    coinInfo.id ?
                         (
                             <Row className="coin-data">
                                 <Col className="coin-headline">

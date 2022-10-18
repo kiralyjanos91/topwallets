@@ -28,7 +28,7 @@ export default function Coin(){
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'RapidaApi Key',
+                'X-RapidAPI-Key': 'RapidApi Key',
                 'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
             }
         };

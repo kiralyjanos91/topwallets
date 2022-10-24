@@ -1,8 +1,7 @@
-@font-face {
-  font-family: encode-sans;
-  src: url(./fonts/EncodeSans-VariableFont_wdth,wght.ttf);
+@font-face{
+  font-family:Staatliches;
+  src: url(./fonts/Staatliches-Regular.ttf)
 }
-
 
 .App {
   text-align: center;
@@ -22,9 +21,9 @@
 }
 
 h1{
-  font-family: encode-sans;
-  font-weight: 600 !important;
-  color: white
+  font-family: Staatliches;
+  color: white;
+  font-size: 9vh !important;
 }
 
 .container-fluid{

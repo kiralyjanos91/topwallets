@@ -11,6 +11,11 @@
     }
 }
 
+.wallets-description{
+    margin-top:50px;
+    color:#e9ecefeb;
+}
+
 .wallets-list-row{
     display: flex;
     min-height: fit-content;

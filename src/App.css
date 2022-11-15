@@ -45,6 +45,10 @@ h1{
   .goback{
     margin-top:30px;
   }
+
+  h1{
+    font-size: 6vh !important;
+  }
 }
 
 .headline-text-row{

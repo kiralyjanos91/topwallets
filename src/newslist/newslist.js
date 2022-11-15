@@ -15,7 +15,7 @@ export default function NewsList(){
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '56bd2c0a8bmshb28498e9bd62633p1d4ce4jsn48be7ca34c90',
+                'X-RapidAPI-Key': 'rapidapi crypto news key',
                 'X-RapidAPI-Host': 'crypto-news-live3.p.rapidapi.com'
             }
         };

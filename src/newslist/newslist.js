@@ -10,20 +10,24 @@ export default function NewsList(){
 
     const { page } = useParams()
     const [ newsListData , setNewsListData ] = useState([])
+    const [ fetchError , setFetchError ] = useState(false)
 
     useEffect(()=>{
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'rapidapi crypto news key',
-                'X-RapidAPI-Host': 'crypto-news-live3.p.rapidapi.com'
+                'X-RapidAPI-Key': '4c1b4e2321mshe0210a636c78dd0p165dacjsn7f8b788e7094',
+                'X-RapidAPI-Host': 'mboum-finance.p.rapidapi.com'
             }
         };
         
-        fetch('https://crypto-news-live3.p.rapidapi.com/news', options)
+        fetch('https://mboum-finance.p.rapidapi.com/ne/news', options)
             .then(response => response.json())
             .then(response => setNewsListData(response))
-            .catch(err => console.error(err));
+            .catch(err => {
+                setFetchError(true)    
+                console.error(err)
+            });
     },[])
 
     const newsList = newsListData.slice((page-1)*10,page*10).map(( news , index )=>
@@ -31,34 +35,49 @@ export default function NewsList(){
             key={index}
             title={news.title}
             source={news.source}
-            url={news.url}
+            url={news.link}
         />
     )
 
     const pageCount = Math.ceil(newsListData.length / 10)
 
     return(
-        <Container className="news-list">
-            <Row className="headline-text-row">
-                <Row className="headline-text-row-inner news-headline">
-                    <h1>Crypto News</h1>
-                    <div className="gradient-hr" />
+        <>
+            <div
+                className = "background-effect-div"
+            >
+            </div>
+            <Container className="news-list">
+                <Row className="headline-text-row">
+                    <Row className="headline-text-row-inner news-headline">
+                        <h1>Crypto News</h1>
+                        <div className="gradient-hr" />
+                    </Row>
                 </Row>
-            </Row>
-            {
-                newsListData.length > 0 ?
-                <>
-                    {newsList}
-                    <NewsPagination 
-                        activePage={page}
-                        pages={pageCount}
-                    />
-                </>
-                :
-                <Col className="news-spinner-col">
-                    <Spinner animation="border" variant="light" />
-                </Col>
-            }
-        </Container>
+                    {
+                    fetchError ?
+                        <Row className="error-row">
+                            <h3>Something Went Wrong. Please come back later!</h3>
+                        </Row>
+                    :
+                    <>
+                            {
+                                newsListData.length > 0 ?
+                                <>
+                                    {newsList}
+                                    <NewsPagination 
+                                        activePage={page}
+                                        pages={pageCount}
+                                    />
+                                </>
+                                :
+                                    <Col className="news-spinner-col">
+                                        <Spinner animation="border" variant="light" />
+                                    </Col>
+                            }
+                        </>
+                    }
+            </Container>
+        </>
     )
 }

@@ -1,5 +1,13 @@
 .news-button-col{
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.news-button-row{
+    width: 200px;
 }
 
 .news-headline{
@@ -22,7 +30,13 @@
     justify-content: center;
     align-items: center;
     border-top: 1px solid #ffffff17;
-    background-color:#00000029;
+    background-color:#0000005c;
+}
+
+.news-source{
+    color: #ffffff57;
+    display: flex;
+    justify-content: center;
 }
 
 .news-spinner-col{
@@ -30,5 +44,10 @@
     justify-content: center;
     align-items: center;
     height: calc(100vh - 300px);
+}
+
+.error-row{
+    height: 50vh;
+    padding-top: 10vh;
 }
 

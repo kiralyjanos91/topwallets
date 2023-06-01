@@ -29,7 +29,7 @@
     flex-direction: column;
     align-items: center;
     row-gap: 10px;
-    background-color: #001317;
+    background-color: #0000005c;
     margin-bottom: 20px;
     cursor: pointer;
     border-radius: 5px;
@@ -37,7 +37,7 @@
 }
 
 .coin-list-element:hover{
-    background-color: #001013;
+    background-color: #00000070;
 }
 
 .coin-list-price{

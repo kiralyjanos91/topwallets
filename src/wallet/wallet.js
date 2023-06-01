@@ -25,49 +25,55 @@ export default function Wallet(){
     )
 
     return(
-        <Container className="wallet">
-            <Row>
-                <Col>
-                    <p className="goback" onClick={()=>{navigate(-1)}}>{"← Wallets"}</p>
-                </Col>
-            </Row>
-            <Row className="wallet-name">
-                <Col>
-                    <h1>
-                        {name}
-                    </h1>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <StarRating rating={rating} />
-                </Col>
-            </Row>  
-            <Row className="wallet-img-and-bullets-row">
-                <Col className="wallet-img-col" md="6">
-                    <img src={image} alt={image} className="wallet-image"/>
-                </Col>
-                <Col className="bullets-col" md="6">
-                    <ul>
-                        {bulletsList}
-                    </ul>
-                </Col>
-            </Row>
-            <Row className="description-row">
-                <Col>
-                    {description}
-                </Col>
-            </Row>
-            <Row className="wallet-buttons-row">
-                <Col className="wallet-buttons" md="6">
-                    <Button href={`${website}`} target="_blank">Visit Website</Button>
-                </Col>
-                <Col className="wallet-buttons" md="6">
-                    <Link to="/coins">
-                        <Button>Check Top Coins</Button>
-                    </Link>
-                </Col>
-            </Row>
-        </Container>
+        <>
+            <div
+                className = "background-effect-div"
+            >
+            </div>
+            <Container className="wallet">
+                <Row>
+                    <Col>
+                        <p className="goback" onClick={()=>{navigate(-1)}}>{"← Wallets"}</p>
+                    </Col>
+                </Row>
+                <Row className="wallet-name">
+                    <Col>
+                        <h1>
+                            {name}
+                        </h1>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <StarRating rating={rating} />
+                    </Col>
+                </Row>  
+                <Row className="wallet-img-and-bullets-row">
+                    <Col className="wallet-img-col" md="6">
+                        <img src={image} alt={image} className="wallet-image"/>
+                    </Col>
+                    <Col className="bullets-col" md="6">
+                        <ul>
+                            {bulletsList}
+                        </ul>
+                    </Col>
+                </Row>
+                <Row className="description-row">
+                    <Col>
+                        {description}
+                    </Col>
+                </Row>
+                <Row className="wallet-buttons-row">
+                    <Col className="wallet-buttons" md="6">
+                        <Button href={`${website}`} target="_blank">Visit Website</Button>
+                    </Col>
+                    <Col className="wallet-buttons" md="6">
+                        <Link to="/coins">
+                            <Button>Check Top Coins</Button>
+                        </Link>
+                    </Col>
+                </Row>
+            </Container>
+        </>
     )
 }

@@ -9,21 +9,21 @@ export default function Header(){
         <Container className="header" fluid>
             <Container className="header-blur" fluid>
                 <Container>
-                    <Row>
+                    <Row className="header-row">
                         <Col md="6" className="header-text">
                             <h1>Top Picks for the Best Crypto Wallets of 2022</h1>
                             <Row className="header-buttons-row">
                                 <Col className="header-buttons">
                                     <Link to="/wallets">
-                                        <Button>Check Them Now</Button>
+                                        <Button className="header-button">Check Them Now</Button>
                                     </Link>
                                     <Link to="/coins">
-                                        <Button>Check Coins</Button>
+                                        <Button className="header-button">Check Coins</Button>
                                     </Link>
                                 </Col>
                             </Row>
                         </Col>
-                        <Col md="6">
+                        <Col md="6" className="header-image-col">
                             <img src={cryptoImg} alt="crypto-img" className="crypto-img" />
                         </Col>
                     </Row>

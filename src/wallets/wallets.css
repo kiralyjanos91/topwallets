@@ -24,13 +24,13 @@
     padding-bottom: 20px;
     align-items: center;
     font-size: 20px;
-    background-color: #001317;
+    background-color: #0000005c;
     border-radius: 5px;
     margin-top: 20px;
 }
 
 .wallets-list-row:hover{
-    background-color: #001013;
+    background-color: #00000070;
 }
 
 .wallets-list{

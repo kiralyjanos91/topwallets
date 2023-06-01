@@ -29,25 +29,31 @@ export default function Coins({ coinlist , isError }){
     )
 
     return(
-        <Container className="coins">
-            <Row className="headline-text-row">
-                <Row className="headline-text-row-inner coins-headline">
-                    <h1>Top Coins</h1>
-                    <div className="gradient-hr" />
+        <>
+            <div
+                className = "background-effect-div"
+            >
+            </div>
+            <Container className="coins">
+                <Row className="headline-text-row">
+                    <Row className="headline-text-row-inner coins-headline">
+                        <h1>Top Coins</h1>
+                        <div className="gradient-hr" />
+                    </Row>
                 </Row>
-            </Row>
-            <Row className="coin-list">
-                {isError ? 
-                    <p>Server Overloaded - Please try again later</p>      
-                        :   
-                    coinList.length > 1 ? 
-                        coinList
-                    :
+                <Row className="coin-list">
+                    {isError ? 
+                        <p>Server Overloaded - Please try again later</p>      
+                            :   
+                        coinList.length > 1 ? 
+                            coinList
+                        :
                         <Col className="spinner-col">
-                            <Spinner animation="border" variant="light" />
-                        </Col>
-                }
-            </Row>
-        </Container>
+                                <Spinner animation="border" variant="light" />
+                            </Col>
+                    }
+                </Row>
+            </Container>
+        </>
     )
 }

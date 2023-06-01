@@ -22,6 +22,15 @@
     padding: 0;
 }
 
+.header-row{
+    display: flex;
+    justify-content: center;
+}
+
+.header-image-col{
+    width: fit-content;
+}
+
 .header-text{
     display: flex;
     flex-direction: column;
@@ -30,10 +39,14 @@
     margin-bottom: 30px;
 }
 
-.header-buttons {
+.header-buttons{
     justify-content: center;
     column-gap: 10px;
     display: flex;
+}
+
+.header-button{
+    font-size: calc(15px + 0.3vw);
 }
 
 .crypto-img{

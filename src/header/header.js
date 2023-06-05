@@ -11,7 +11,7 @@ export default function Header(){
                 <Container>
                     <Row className="header-row">
                         <Col md="6" className="header-text">
-                            <h1>Top Picks for the Best Crypto Wallets of 2022</h1>
+                            <h1>Top Picks for the Best Crypto Wallets of 2023</h1>
                             <Row className="header-buttons-row">
                                 <Col className="header-buttons">
                                     <Link to="/wallets">
